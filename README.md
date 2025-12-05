@@ -1,10 +1,8 @@
 # How To Upload To Steam And Itch Using Command Line Tools
 
-Go to the exports/ folder for your game
+Go to the exports/ folder for your game (or make one if you don't have it)
 
-Create folder "export_tools"
-
-Folder structure looks like this now:
+Make the following folder structure:
 ```
 	exports/
 		export_tools/
@@ -15,9 +13,11 @@ Folder structure looks like this now:
 		windows_standalone/
 		windows_steam/
 ```
+Screenshot on my machine:
+
 <img width="477" height="386" alt="directory layout" src="https://github.com/user-attachments/assets/f0806f82-dac9-43fa-8c17-7d214811ad08" />
 
-_steam folders contain builds for steam, _standalone contain builds for itch
+Build your game for each folder. _steam folders contain builds for steam, _standalone contain builds for itch.
 
 
 ## STEAM SETUP
@@ -40,7 +40,7 @@ Create files with this format:
 
 App id is the number found in the url of your game. For example, Half Life Alyx (https://store.steampowered.com/app/546560/HalfLife_Alyx/) has an app id of 546560. 
 
-Depot ids are found on your depot settings on steamworks: https://partner.steamgames.com/apps/depots/<app_id>
+Depot ids are found in your depot settings on steamworks: https://partner.steamgames.com/apps/depots/<app_id>
 
 You should have one depot_build vdf file for each depot and one overall app_build vdf file. I'm assuming you'll have 3 depots: Windows, Mac, and Linux.
 
@@ -102,6 +102,7 @@ Here's what mine looks like for Endoparasitic 2:
 <img width="630" height="497" alt="app_build_contents" src="https://github.com/user-attachments/assets/1657c86d-1054-4314-b061-d753806379a7" />
 
 ### Depot Build vdf File Contents Format
+Copy this into your depot_build vdf files and replace the parts in <> with your own.
 ```
 	"DepotBuildConfig"
 	{
@@ -129,7 +130,7 @@ Example depot vdf file contents using Half Life Alyx probable depot_id:
 	  }
 	}
 ```
-Here's what mine looks like for Endoparasitic 2:
+Here's what mine look like for Endoparasitic 2:
 
 <img width="500" height="300" alt="depot_build_1_contents" src="https://github.com/user-attachments/assets/7a1686fd-a808-4f2e-afd2-160463fe268f" />
 <img width="500" height="300" alt="depot_build_2_contents" src="https://github.com/user-attachments/assets/45d2eb9d-8ea6-4c2f-86de-a2294487102d" />
@@ -160,25 +161,27 @@ run_app_build ..\scripts\app_build_<app_id>.vdf
 ```
 (replace <app_id> with your app id, also note that the vdf file path is relative to steamcmd.exe, not your terminal working directory)
 
-open the 'run_build.bat' file in export_tools/ in a text editor and update it to contain: 
+Fine the 'run_build.bat' file in export_tools/
+
+<img width="332" height="414" alt="pointing at run_build" src="https://github.com/user-attachments/assets/c90476a9-fa9c-49d9-8cf6-4f4049874df0" />
+
+Open it in a text editor and update it to contain: 
 ```
 builder\steamcmd.exe +login <steam_username> +run_app_build ..\scripts\app_build_<app_id>.vdf +quit
 ```
 (replace <steam_username> and <app_id> with yours)
 
-<img width="332" height="414" alt="pointing at run_build" src="https://github.com/user-attachments/assets/c90476a9-fa9c-49d9-8cf6-4f4049874df0" />
-
-now you can double click the 'run_build.bat' file to automatically upload to steam
+Now you can double click the 'run_build.bat' file whenever you want to upload new builds to Steam.
 
 ## ITCH SET UP
 
-Download butler [https://itch.io/docs/butler/installing.html](https://itchio.itch.io/butler)
+Download butler: [https://itch.io/docs/butler/installing.html](https://itchio.itch.io/butler) (get the stable version for your OS)
 
 Copy butler.exe to export_tools/
 
 Open terminal window (on Windows click path at top and type 'cmd')
 
-This is the format for uploading builds to itch:
+This is the format for uploading builds to itch, you enter it into the terminal, replacing the parts in <> with your own:
 ```
 butler push <content path> <itch_username>/<game>:<channel>
 ```
@@ -186,11 +189,9 @@ Here's an example windows build of Endoparasitic 2 command for me:
 ```
 butler push ../windows_standalone nartier/endoparasitic-2:windows
 ```
-(I just enter that into the terminal and press enter)
-
 Note that the game name needs to written exactly as it is in the url, for example my game has this url: https://nartier.itch.io/endoparasitic-2 so I made sure to use a '-' before the 2
 
-You can replace the 'windows' at the end with whatever you want and a new downloadable category will automatically be created, e.g. you can do any of these:
+You can replace the 'windows' at the end with whatever you want and a new downloadable category will automatically be created. For example, you can do any of these:
 ```
 butler push ../windows_standalone <itch_username>/<game>:windows-64
 butler push ../windows_standalone_32 <itch_username>/<game>:windows-32
@@ -207,3 +208,7 @@ butler push ../mac_standalone nartier/endoparasitic-2:mac
 butler push ../linux_standalone nartier/endoparasitic-2:linux
 ```
 Now you can just double click your run_build.bat file to automatically publish new builds to steam and itch. I also made 2 more, one for only itch, and one for only steam.
+
+Final contents of export_tools/
+
+<img width="595" height="501" alt="export tools final contents" src="https://github.com/user-attachments/assets/b913e13a-f63f-472a-a0c1-11e2eaeb9387" />
